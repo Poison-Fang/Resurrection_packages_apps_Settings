@@ -159,6 +159,8 @@ import com.android.settings.rr.Headsup;
 import com.android.settings.rr.input.HWSettings;
 
 import java.net.URISyntaxException;
+import com.android.settings.custom.ScreenStabilization;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -301,6 +303,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             Settings.PaymentSettingsActivity.class.getName(),
             Settings.TimerSwitchSettingsActivity.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
+	    Settings.ScreenStabilizationActivity.class.getName(),
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -414,6 +417,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
             RunningServices.class.getName(),
+	    ScreenStabilization.class.getName(),
     };
 
 
