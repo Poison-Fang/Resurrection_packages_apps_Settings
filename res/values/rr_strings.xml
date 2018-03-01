@@ -2015,4 +2015,10 @@
     <string name="data_activity_arrows_summary">Display data activity arrows</string>
     <string name="wifi_activity_arrows_title">Wifi activity</string>
     <string name="wifi_activity_arrows_summary">Display wifi activity arrows</string>
+
+    <!-- Font picker -->
+    <string name="font_picker_title">Font</string>
+    <string name="font_subs_info">Please make sure to disable every Font Overlay in Substratum before using this.\nIf you want to go back to using Substratum, make sure to select the Default Font (Roboto) here.</string>
+    <string name="font_picker_reboot_recommended">For optimal experience,\nreboot your device</string>
+
 </resources>
