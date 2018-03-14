@@ -47,6 +47,13 @@
             android:key="rotation"
             cm:requiresFeature="android.hardware.sensor.accelerometer" />
 
+	<!-- Screen Stabilization -->
+        <Preference
+	    android:key="screen_stabilization"
+	    android:title="@string/screen_stabilization_title"
+	    android:summary="@string/screen_stabilization_summary"
+	    android:fragment="com.android.settings.custom.ScreenStabilization" />
+
         <com.android.settings.display.NightDisplayPreference
                 android:key="night_display"
                 android:title="@string/night_display_title"
