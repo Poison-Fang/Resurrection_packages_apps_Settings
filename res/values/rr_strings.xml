@@ -2551,4 +2551,8 @@
     <string name="grey">Grey</string>
     <string name="default_string">Default</string>
 
+    <!-- System default animation -->
+    <string name="system_default_animation_title">Android P animation style</string>
+    <string name="system_default_animation_summary">Enable Android P \"Default\" animations</string>
+
 </resources>
