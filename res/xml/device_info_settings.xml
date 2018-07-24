@@ -60,6 +60,11 @@
         <Preference android:key="device_feedback"
                 android:title="@string/device_feedback" />
 
+        <Preference
+                android:key="dev_info"
+                android:title="@string/dev_head"
+                android:summary="@string/dev_name"/>
+
         <!-- Device hardware model -->
         <Preference
                 android:key="device_model"
