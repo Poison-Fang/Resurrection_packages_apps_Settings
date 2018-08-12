@@ -13,7 +13,11 @@
 */
 package com.android.settings.rr;
 
+import android.content.ContentResolver;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
@@ -29,6 +33,8 @@ import com.android.settings.Utils;
 public class LockScreenUI extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "LockScreenSecurity";
+    private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
+    ListPreference mLockClockFonts;
 
     @Override
     public int getMetricsCategory() {
@@ -40,9 +46,24 @@ public class LockScreenUI extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.rr_ls_ui);
+        // Lockscren Clock Fonts
+        ContentResolver resolver = getActivity().getContentResolver();
+        mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
+        mLockClockFonts.setValue(String.valueOf(Settings.System.getInt(
+                getContentResolver(), Settings.System.LOCK_CLOCK_FONTS, 0)));
+        mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+        mLockClockFonts.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) 		{
-        return true;
+         ContentResolver resolver = getActivity().getContentResolver();
+         if (preference == mLockClockFonts) {
+            Settings.System.putInt(getContentResolver(), Settings.System.LOCK_CLOCK_FONTS,
+                    Integer.valueOf((String) newValue));
+            mLockClockFonts.setValue(String.valueOf(newValue));
+            mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+            return true;
+        }
+        return false;
     }
 }
