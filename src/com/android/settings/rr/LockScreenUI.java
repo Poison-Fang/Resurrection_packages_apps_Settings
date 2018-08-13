@@ -56,7 +56,7 @@ public class LockScreenUI extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
         mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
         mLockClockFonts.setValue(String.valueOf(Settings.System.getInt(
-                getContentResolver(), Settings.System.LOCK_CLOCK_FONTS, 0)));
+                getContentResolver(), Settings.System.LOCK_CLOCK_FONTS, 26)));
         mLockClockFonts.setSummary(mLockClockFonts.getEntry());
         mLockClockFonts.setOnPreferenceChangeListener(this);
 
@@ -69,12 +69,12 @@ public class LockScreenUI extends SettingsPreferenceFragment implements
 
         mClockFontSize = (CustomSeekBarPreference) findPreference(CLOCK_FONT_SIZE);
         mClockFontSize.setValue(Settings.System.getInt(getContentResolver(),
-                Settings.System.LOCKCLOCK_FONT_SIZE, 78));
+                Settings.System.LOCKCLOCK_FONT_SIZE, 102));
         mClockFontSize.setOnPreferenceChangeListener(this);
 
         mDateFontSize = (CustomSeekBarPreference) findPreference(DATE_FONT_SIZE);
         mDateFontSize.setValue(Settings.System.getInt(getContentResolver(),
-                Settings.System.LOCKDATE_FONT_SIZE,14));
+                Settings.System.LOCKDATE_FONT_SIZE,24));
         mDateFontSize.setOnPreferenceChangeListener(this);
     }
 

@@ -2051,6 +2051,11 @@
     <string name="lock_clock_font_notoserif_italic">NotoSerif Italic</string>
     <string name="lock_clock_font_notoserif_bold">NotoSerif Bold</string>
     <string name="lock_clock_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+    <string name="lock_clock_font_gobold">GoBold Light</string>
+    <string name="lock_clock_font_roadrage">Road Rage</string>
+    <string name="lock_clock_font_snowstorm">Snowstorm</string>
+    <string name="lock_clock_font_googlesans">Google Sans</string>
+    <string name="lock_clock_font_themeable">Themeable (or VCR OSD Mono)</string>
 
     <!-- Lock Date Fonts -->
     <string name="lock_date_font_title">Date font options</string> 
